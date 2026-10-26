@@ -497,9 +497,6 @@ address {
 }
 body:has(.opt-add:checked) .cartbar { display: flex; }
 .cartbar-info { font-weight: 500; }
-.cartbar-info::before {
-  content: "Cart: " counter(items) " item(s), \20B1" counter(total);
-}
 .btn-light { padding: .55rem 1.2rem; }
 
 /* ---------- 11. SCREENS: CART / CHECKOUT / PAID ---------- */
@@ -530,10 +527,10 @@ body:has(.switch:not(#step-shop):checked) { overflow: hidden; }
 }
 .panel h2 { margin-bottom: 1rem; }
 
-/* Cart lines (shown one by one by cart-rules.css) */
+/* Cart lines (created by cart.js) */
 .lines { margin: 0; padding: 0; list-style: none; }
 .line {
-  display: none;
+  display: grid;
   grid-template-columns: 1fr auto auto;
   gap: 1rem;
   padding: .8rem 0;
@@ -567,7 +564,6 @@ body:has(.opt-add:checked) .btn-checkout { display: inline-block; }
   font-weight: 700;
   color: var(--leaf);
 }
-.total-amount::before { content: "\20B1" counter(total); }
 
 .actions {
   display: flex;
