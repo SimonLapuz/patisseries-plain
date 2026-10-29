@@ -14,8 +14,6 @@
    WHERE THE PRICES COME FROM
    Each size button in index.html carries its own data, for example:
      <input ... data-name="Strawberry Cake" data-size="Whole" data-price="2299">
-   To change a price: change data-price AND the number shown on the
-   label next to it. You no longer need to edit any CSS file.
    ===================================================================== */
 
 (function () {
